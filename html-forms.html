@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <h1>Basic Form</h1>
+    <form action="#" method="#">
+        <!-- id     : for the label, lowercase + kebab case -->
+        <!-- name   : for the backend, lowercase + snake case -->
+        <!-- min/max : set the minimum and maximum value of an input:number or input:date -->
+        <!-- maxlength/minlength : set the minimum and maximum number of characters of a text (text,email,password,textarea) -->
+        <!-- required : the field must not be empty -->
+        <!-- accept : specify the file type -->
+
+        <!-- type text : accepts numbers, letters, special characters, space -->
+        <label for="full-name">Full Name</label>
+        <input type="text" name="full_name" id="full-name" maxlength="10" placeholder="LastName, FirstName" required>
+        
+        <br>
+
+        <!-- type password : same as type text but hidden -->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" minlength="8">
+
+        <br>
+
+        <!-- type number : accepts numerical value only -->
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" max="60">
+
+        <br>
+
+        <!-- type date : accepts date input in mm/dd/yyyy format -->
+        <label for="bday">Birthday</label>
+        <input type="date" name="bday" id="bday" min="2023-10-18">
+
+        <br>
+
+        <!-- type email : accepts email input. checks the @ symbol. -->
+        <label for="work-mail">Work E-mail</label>
+        <input type="email" name="work_mail" id="work-mail">
+
+        <br>
+
+        <label for="personal-mail">Personal E-mail</label>
+        <input type="email" name="personal_mail" id="personal-mail">
+
+        <br>
+
+        <!-- textarea : accepts long texts with multiple lines -->
+        <!-- cols : width -->
+        <!-- rows : height -->
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+
+        <br><br>
+
+        <!-- type radio : multiple options, select 1 only -->
+        <!-- value : important, for the backend -->
+        <p>Size of Shirt</p>
+        <input type="radio" name="shirt_size" id="sm" value="small">
+        <label for="sm">Small</label>
+        <br>
+        <input type="radio" name="shirt_size" id="md" value="medium">
+        <label for="md">Medium</label>
+        <br>
+        <input type="radio" name="shirt_size" id="lg" value="large">
+        <label for="lg">Large</label>
+
+        <br><br>
+
+        <!-- type checkbox : select multiple -->
+        <!-- value : important, for the backend -->
+        <p>Hobbies</p>
+        <input type="checkbox" name="hobbies" id="sing" value="sing">
+        <label for="sing">Singing</label>
+        <br>
+        <input type="checkbox" name="hobbies" id="dance" value="dance">
+        <label for="dance">Dancing</label>
+        <br>
+        <input type="checkbox" name="hobbies" id="paint" value="paint">
+        <label for="paint">Painting</label>
+
+        <br>
+
+        <!-- select : dropdown menu, select 1 or multiple, to save space if you have many options -->
+        <label for="major">Major</label>
+        <select name="major" id="major" multiple>
+            <option value="" hidden>Select Your Major</option>
+            <option value="PolSci">Political Science</option>
+            <option value="IT">Information Technology (IT)</option>
+            <option value="Business">Business Administration</option>
+            <option value="Arts">Arts and Entertainment</option>
+            <option value="Crim">Criminology</option>
+            <option value="Acct">Accountancy</option>
+        </select>
+
+        <br>
+
+        <!-- type file : for uploading a file from the computer -->
+        <label for="profile-pic">Profile Picture</label>
+        <input type="file" name="profile_pic" id="profile-pic" accept="image/*">
+
+        <br><br>
+
+        <!-- type submit : submits the form -->
+        <!-- 1 form = 1 submit button -->
+        <!-- <input type="submit" value="Send This" name="btn_submit"> -->
+        <button type="submit" value="1" name="btn_submit">Go!</button>
+    </form>
+</body>
+</html>
